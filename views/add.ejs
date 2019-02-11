@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add your Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+    <center><h1><b>Add New Products</b></h1></center>
+    <center>
+        <form action="/insert" method="POST" enctype="multipart/form-data">
+    <table class="table">
+        <tr>
+            <td><b>Product Name</b></td>
+            <td><input type="text" name="itemname"></td>
+        </tr>
+        <tr>
+            <td><b>Product Type</b></td>
+            <td><input type="text" name="itemtype"></td>
+        </tr>
+        <tr>
+            <td><b> Your/seller Name</b></td>
+            <td><input type="text" name="itemseller"></td>
+        </tr>
+        <tr>
+            <td>
+            <input type="file" name="itempic"></form>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Submit</button></td>
+        </tr>
+    </table>
+</center>
+
+</form>
+</body>
+</html>
+
+
