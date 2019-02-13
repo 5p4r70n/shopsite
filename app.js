@@ -7,7 +7,7 @@ const fileUpload=require("express-fileupload")
 app.use(fileUpload())
 app.use(bodyparser.urlencoded({extended:false}))
 const CONNECTION_URI=process.env.MONGODB_URI || 'mongodb://localhost/shopping'
-mangoose.Promise=global.Promise;
+mongoose.Promise=global.Promise;
 mongoose.set('debug',true)
 mongoose.connect(CONNECTION_URI,function(err)
 {console.log(err)})
@@ -139,7 +139,7 @@ app.get("/home/view",function(req,res){
     })
 }
 )
-app.listen(port,function(req,res)
+app.listen(PORT,function(req,res)
 {
     console.log("server started ${PORT}" )
 })
