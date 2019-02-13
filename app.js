@@ -69,7 +69,7 @@ shop.find({},function(err,result){
     b1.save(function(err,result)
     {
         if(err){res.send(err)}
-        else{res.send("<center><h1><b>data inserted</b></h1></center>")}
+        else{res.send("<center><h1><b>data inserted</b></h1><br> <a href='/'>Home</a> </center>")}
     })
 
     }
