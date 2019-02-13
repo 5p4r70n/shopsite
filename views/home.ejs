@@ -25,28 +25,41 @@
                     <li class="nav-item">
                       <a class="nav-link" href="/home/add">Add products</a>
                     </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                      </div>
-                    </li>
                     <li class="nav-item">
                             <a class="nav-link" href="/home/view">View products</a>
                           </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                  </form>
                 </div>
               </nav>
-
-    <center><h1><b>Welcome Home</b></h1></center>
+              
+<div class="container-fluid">
+  <center><h1><b>Avilable Items</b></h1></center>
+  <div class="row">
+        <%for(var i=0;i<data.length;i++)
+        { var count=count++
+          if (count==4)
+          {%> 
+            <br>
+            <%count=0%>
+          <%}
+          else {}%>
+          <div class="col-lg-2">
+              <div class="card" style="width: 18rem;">
+                  <img src="../public/images/<%=data[i].itempicid %>"class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title"><%=data[i].itemname%></h5>
+                    <p class="card-text">Item Type: <%=data[i].itemid %></p>
+                    <p class="card-text">Item Type: <%=data[i].itemtype %></p>
+                    <p class="card-text">Seller: <%=data[i].itemseller %></p>
+                    <a href="/home/update" class="btn btn-primary">Update</a>
+                    <a href="/home/delete" class="btn btn-primary">Delete</a>
+                  </div>
+                </div>
+                <br>
+            </div>
+        <%}%>
+    </div>
+  </div>
+</div>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <title>View All</title>
+    <title>Edit Item</title>
 </head>
 <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,23 +28,21 @@
                   </ul>
                 </div>
               </nav>
-    <center><h1><b>View All</b></h1></center>
-    <table class="table" border="1">
-        <tr>
-        <th>itemid</th>
-        <th>itemname</th>
-        <th>itemtype</th>
-        <th>itemseller</th>
-        <th>item pic</th>
-    </tr>
-        <%for(var i=0;i<data.length;i++)
-        {%> <tr>
-            <td><%=data[i].itemid %></td>
-            <td><%=data[i].itemname %></td>
-            <td><%=data[i].itemtype %></td>
-            <td><%=data[i].itemseller %></td>
-            <td><%=data[i].itempicid %></td>
-        </tr> <%}%>
-    </table>
+    <form action="/home/delete/del" method="POST">
+    <div class="container-fluid">
+        <center><b><h1>Delete Item</h1></b></center>
+        <table class="table table-dark">
+            <tr>
+                <td>Product ID</td>
+                <td>
+                <input type="text" name="itemid" id=""></td>
+            </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" class="btn btn-light">Submit</button></td>
+                </tr>
+        </table>
+    </div>
+</form>
 </body>
 </html>
